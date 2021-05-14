@@ -162,7 +162,7 @@ https://github.com/farashiani-khalil/crypto-bot-telegram.git
 
 scheduler = AsyncIOScheduler()
 
-scheduler.add_job(crypto_job, "interval", seconds=7000)
+scheduler.add_job(crypto_job, "interval", seconds=5000)
 
 scheduler.start()
 app.run()
