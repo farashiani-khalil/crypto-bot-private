@@ -4,8 +4,7 @@ import requests
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 app = Client(
-    "my_bot",
-    bot_token="1618955724:AAGmCkYNpCz2V60GKPMoHGQxVlfwD9L8Koc"
+    "my_bot"
 )
 
 
@@ -148,11 +147,11 @@ def crypto_get(client, message):
 def crypto_get(client, message):
     message.reply_text("""
 این لیست دستوراتمه
-/addmygroup
+addmygroup
 قیمت ارز دیجیتال رو هر ده ساعت توی گروهت میفرستم
-/removemygroup
+removemygroup
 دیگه توی گروهت قیمت ارز دیجیتال رو نمیفرستم تا زمانی که مجدد گروهت رو ادد کنی
-/cryptoprice
+cryptoprice
 قیمت و تغییرات ده تا ارز دیجیتال رو برات میفرستم
 
 راستی کد این بات رو گذاشتم گیتهابم
@@ -163,7 +162,7 @@ https://github.com/farashiani-khalil/crypto-bot-telegram.git
 
 scheduler = AsyncIOScheduler()
 
-scheduler.add_job(crypto_job, "interval", seconds=36000)
+scheduler.add_job(crypto_job, "interval", seconds=7000)
 
 scheduler.start()
 app.run()
